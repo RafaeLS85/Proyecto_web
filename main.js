@@ -1,35 +1,24 @@
 
 function handleNavClick(section) {
 
+  const home = document.querySelector("#home")
+  const profile = document.querySelector("#profile")
+  const contact = document.querySelector("#contact")
+
     if(section === "home"){
-        document.querySelector("#home").classList.add("show")
-        document.querySelector("#home").classList.remove("hide")
-
-        document.querySelector("#profile").classList.add("hide")
-        document.querySelector("#profile").classList.remove("show")
-
-        document.querySelector("#contact").classList.add("hide")
-        document.querySelector("#contact").classList.remove("show")
+      home.classList.remove("hide")
+      profile.classList.add("hide")
+      contact.classList.add("hide")
     }
     if(section === "profile"){
-        document.querySelector("#home").classList.remove("show")
-        document.querySelector("#home").classList.add("hide")
-
-        document.querySelector("#profile").classList.add("show")
-        document.querySelector("#profile").classList.remove("hide")
-
-        document.querySelector("#contact").classList.add("hide")
-        document.querySelector("#contact").classList.remove("show")
+        profile.classList.remove("hide")
+        home.classList.add("hide")
+        contact.classList.add("hide")
     }
     if(section === "contact"){
-        document.querySelector("#home").classList.remove("show")
-        document.querySelector("#home").classList.add("hide")
-
-        document.querySelector("#profile").classList.remove("show")
-        document.querySelector("#profile").classList.add("hide")
-
-        document.querySelector("#contact").classList.remove("hide")
-        document.querySelector("#contact").classList.add("show")
+        contact.classList.remove("hide")
+        profile.classList.add("hide")
+        home.classList.add("hide")
     }    
 }
 
